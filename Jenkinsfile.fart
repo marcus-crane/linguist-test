@@ -1,0 +1,11 @@
+pipeline {
+    parameters {
+        booleanParam(name: 'blah', defaultValue: false, description: 'Something', )
+    }
+    environment {
+        DOCKER_CONFIG = "/tmp/.docker"
+    }
+    agent {
+        label 'fart'
+    }
+}
